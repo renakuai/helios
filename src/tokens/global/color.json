@@ -1,0 +1,87 @@
+{
+  "color": {
+    "white": {
+      "value": "#FFFFFF"
+    },
+    "black": {
+      "value": "#000000"
+    },
+    "grey": {
+      "10": {
+        "value": "#F5F5F5"
+      },
+      "20": {
+        "value": "#D9D9D9"
+      },
+      "30": {
+        "value": "#BDBDBD"
+      },
+      "40": {
+        "value": "#A1A1A1"
+      },
+      "50": {
+        "value": "#858585"
+      },
+      "60": {
+        "value": "#696969"
+      },
+      "70": {
+        "value": "#4D4D4D"
+      },
+      "80": {
+        "value": "#303030"
+      },
+      "90": {
+        "value": "#141414"
+      }
+    },
+    "orange": {
+      "value": "#FFAF1F"
+    },
+    "rust": {
+      "value": "#CA661E"
+    },
+    "green": {
+      "value": "#0FA852"
+    },
+    "fern": {
+      "value": "#5B945A"
+    },
+    "turquoise": {
+      "value": "#35D2E9"
+    },
+    "teal": {
+      "value": "#35D2E9"
+    },
+    "red": {
+      "value": "#EB1100"
+    },
+    "brick": {
+      "value": "BA4E36"
+    },
+    "blue": {
+      "value": "#1556A2"
+    },
+    "colbalt": {
+      "value": "2F59EF"
+    },
+    "magenta": {
+      "value": "#EB00B8"
+    },
+    "pink": {
+      "value": "#F00793"
+    },
+    "yellow": {
+      "value": "#FFED1F"
+    },
+    "corn": {
+      "value": "#EBBA3A"
+    },
+    "purple": {
+      "value": "#7F2FEF"
+    },
+    "plum": {
+      "value": "#7E33A2"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "font": {
+    "size": {
+      "5x-large": {
+        "value": "3rem"
+      },
+      "4x-large": {
+        "value": "2.5rem"
+      },
+      "3x-large": {
+        "value": "2rem"
+      },
+      "2x-large": {
+        "value": "1.5rem"
+      },
+      "large": {
+        "value": "1.125rem"
+      },
+      "medium": {
+        "value": "1rem"
+      },
+      "small": {
+        "value": "0.875rem"
+      },
+      "2x-small": {
+        "value": "0.75rem"
+      }
+    },
+    "weight": {
+      "bold": {
+        "value": "700"
+      },
+      "semibold": {
+        "value": "600"
+      },
+      "regular": {
+        "value": "400"
+      }
+    },
+    "line-height": {
+      "small": {
+        "value": "140%"
+      },
+      "large": {
+        "value": "164%"
+      },
+      "medium": {
+        "value": "154%"
+      }
+    }
+  }
+}
