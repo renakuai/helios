@@ -1,0 +1,26 @@
+{
+  "color": {
+    "font": {
+      "primary": {
+        "value": "{color.grey.90}"
+      },
+      "secondary": {
+        "value": "{color.grey.60}"
+      },
+      "inverse": {
+        "value": "{color.white}"
+      },
+      "link": {
+        "default": {
+          "value": "{color.grey.90"
+        },
+        "hover": {
+          "value": "{color.grey.60}"
+        }
+      },
+      "failure": {
+        "value": "{color.red.70}"
+      }
+    }
+  }
+}

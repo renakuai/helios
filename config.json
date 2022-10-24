@@ -6,6 +6,7 @@
     "scss": {
       "transformGroup": "scss",
       "buildPath": "build/scss/",
+      "prefix": "token",
       "files": [
         {
           "destination": "_global.scss",

@@ -1,0 +1,11 @@
+@import '/build/scss/_global.scss';
+
+@mixin containers {
+  padding: $token-spacing-large;
+  border-radius: $token-border-radius-medium;
+}
+
+@mixin buttons {
+  padding: $token-spacing-small $token-spacing-base;
+  border-radius: $token-border-radius-large;
+}

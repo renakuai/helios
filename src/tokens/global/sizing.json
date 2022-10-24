@@ -1,13 +1,16 @@
 {
   "spacing": {
-    "3x-small": {
+    "2x-small": {
       "value": "0.25rem"
     },
-    "2x-small": {
+    "small": {
       "value": "0.5rem"
     },
     "base": {
       "value": "1rem"
+    },
+    "large": {
+      "value": "1.5rem"
     },
     "2x-large": {
       "value": "2rem"

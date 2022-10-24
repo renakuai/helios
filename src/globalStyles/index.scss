@@ -1,0 +1,13 @@
+@import '/build/scss/_global.scss';
+@import './_typo.scss';
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600;700&display=swap');
+
+body {
+  color: $token-color-font-primary;
+  font-family: $token-font-family;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 1fr 14fr 1fr;
+}

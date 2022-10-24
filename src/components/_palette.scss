@@ -1,0 +1,7 @@
+@import '../globalStyles/_spacing.scss';
+
+.Palette {
+  @include containers;
+  background-color: $token-color-background-secondary;
+  grid-column: 1 / 2;
+}

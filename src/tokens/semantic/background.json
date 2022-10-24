@@ -1,39 +1,40 @@
 {
-  "spacing": {
-    "3x-small": {
-      "value": "0.25rem"
-    },
-    "2x-small": {
-      "value": "0.5rem"
-    },
-    "base": {
-      "value": "1rem"
-    },
-    "2x-large": {
-      "value": "2rem"
-    },
-    "3x-large": {
-      "value": "3rem"
-    }
-  },
-  "border": {
-    "width": {
-      "thin": {
-        "value": "1px"
+  "color": {
+    "background": {
+      "page": {
+        "value": "{color.white}"
       },
-      "thick": {
-        "value": "2px"
-      }
-    },
-    "radius": {
-      "small": {
-        "value": "0.25rem"
+      "primary": {
+        "value": "{color.white}"
       },
-      "medium": {
-        "value": "0.5rem"
+      "secondary": {
+        "value": "{color.grey.10}"
       },
-      "large": {
-        "value": "32rem"
+      "action": {
+        "primary": {
+          "default": {
+            "value": "{color.grey.90}"
+          },
+          "hover": {
+            "value": "{color.grey.70}"
+          }
+        },
+        "secondary": {
+          "default": {
+            "value": "{color.white}"
+          },
+          "hover": {
+            "value": "{color.grey.10}"
+          }
+        },
+        "danger": {
+          "default": {
+            "value": "{color.red.70}"
+          },
+          "hover": {
+            "value": "{color.red.80}"
+          }
+        }
       }
     }
   }

@@ -1,0 +1,15 @@
+{
+  "color": {
+    "icon": {
+      "primary": {
+        "value": "{color.grey.90}"
+      },
+      "secondary": {
+        "value": "{color.grey.40}"
+      },
+      "inverse": {
+        "value": "{color.white}"
+      }
+    }
+  }
+}

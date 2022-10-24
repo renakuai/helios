@@ -1,5 +1,8 @@
 {
   "font": {
+    "family": {
+      "value": "Figtree, sans-serif"
+    },
     "size": {
       "5x-large": {
         "value": "3rem"
@@ -46,6 +49,14 @@
       },
       "medium": {
         "value": "154%"
+      }
+    },
+    "style": {
+      "underline": {
+        "value": "underline"
+      },
+      "default": {
+        "value": "none"
       }
     }
   }
