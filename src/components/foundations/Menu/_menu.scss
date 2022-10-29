@@ -1,0 +1,13 @@
+@import '/build/scss/_global.scss';
+
+.Color__selector {
+  display: flex;
+  flex-direction: column;
+  max-height: 220px;
+  gap: $token-spacing-small;
+  overflow-y: scroll;
+  padding: $token-spacing-base;
+  border: 2px solid $token-color-border-secondary;
+  border-radius: $token-border-radius-medium;
+  margin-bottom: $token-spacing-base;
+}

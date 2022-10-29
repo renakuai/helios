@@ -1,7 +1,8 @@
 @import '../globalStyles/_spacing.scss';
 
-.Palette {
+.Side {
   @include containers;
   background-color: $token-color-background-secondary;
   grid-column: 1 / 2;
+  min-height: 100%;
 }

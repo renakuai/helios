@@ -5,9 +5,7 @@
 body {
   color: $token-color-font-primary;
   font-family: $token-font-family;
-}
-
-#root {
-  display: grid;
-  grid-template-columns: 1fr 14fr 1fr;
+  padding: 0 $token-spacing-large;
+  margin: 0;
+  box-sizing: border-box;
 }

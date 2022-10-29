@@ -1,5 +1,29 @@
 @import '/build/scss/_global.scss';
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: $token-font-line-height-small;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: $token-spacing-base;
+}
+
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: $token-spacing-small;
+}
+
 h1 {
   font-size: $token-font-size-5x-large;
   font-weight: $token-font-weight-bold;
@@ -33,6 +57,7 @@ h6 {
 p {
   font-size: $token-font-size-medium;
   font-weight: $token-font-weight-regular;
+  line-height: $token-font-line-height-large;
 
   .bold {
     font-weight: $token-font-weight-bold;
