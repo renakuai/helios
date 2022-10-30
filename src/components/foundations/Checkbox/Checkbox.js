@@ -7,7 +7,8 @@ function Checkbox(props) {
     children,
     pickedColors,
     setPickedColors,
-    hex } = props;
+    hex
+  } = props;
 
   const [foundHex, setFoundHex] = useState('')
   const [checked, setChecked] = useState(true);
@@ -32,7 +33,6 @@ function Checkbox(props) {
     }
 
   };
-
 
   return (
     <div
