@@ -55,19 +55,20 @@ h6 {
 }
 
 p {
+  line-height: $token-font-line-height-medium;
+}
+
+p.Bold {
   font-size: $token-font-size-medium;
+  font-weight: $token-font-weight-bold;
+}
+
+p.Small {
   font-weight: $token-font-weight-regular;
-  line-height: $token-font-line-height-large;
+  font-size: $token-font-size-small;
+}
 
-  .bold {
-    font-weight: $token-font-weight-bold;
-  }
-
-  .small {
-    font-size: $token-font-size-small;
-  }
-
-  .xsmall {
-    font-size: $token-font-size-2x-small;
-  }
+p.Xsmall {
+  font-weight: $token-font-weight-regular;
+  font-size: $token-font-size-2x-small;
 }

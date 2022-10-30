@@ -1,0 +1,77 @@
+@import '/build/scss/_global.scss';
+
+ul.List {
+  margin-top: 0.15rem;
+  border-radius: $token-border-radius-small;
+  box-shadow: 0px 2px 6px rgba(217, 217, 217, 0.5);
+  position: absolute;
+  background-color: $token-color-white;
+  padding: 0.5rem 0.75rem;
+  box-sizing: border-box;
+  width: 288px;
+  margin-bottom: 4rem;
+  max-height: 220px;
+  overflow-y: scroll;
+
+  li {
+    list-style-type: none;
+    padding: 0.5rem 0.75rem;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #EEF5FD;
+    }
+  }
+}
+
+button {
+  font-size: $token-font-size-medium;
+  padding: 0.5rem .75rem;
+  background-color: #fff;
+  border-radius: $token-border-radius-medium;
+  border: 2px solid $token-color-border-secondary;
+  width: 100%;
+  text-align: left;
+  font-family: $token-font-family;
+  margin-bottom: 0.25rem;
+
+  .Options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: $token-color-font-secondary;
+  }
+}
+
+.Active {
+  &:hover {
+    border-color: $token-color-border-action-primary-hover;
+  }
+
+  .Options {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.Disabled {
+  background-color: $token-color-background-secondary;
+
+  .Options {
+    &:hover {
+      cursor: default;
+    }
+  }
+}
+
+li.Bold {
+  font-weight: $token-font-weight-bold
+}
+
+.Dropdown {
+  .Label {
+    line-height: 104%;
+  }
+}

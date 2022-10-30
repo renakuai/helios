@@ -7,11 +7,10 @@ function Checkbox(props) {
     children,
     pickedColors,
     setPickedColors,
-    hex
-  } = props;
+    hex } = props;
 
   const [foundHex, setFoundHex] = useState('')
-  const [checked, setChecked] = useState(false);
+  const [checked, setChecked] = useState(true);
 
   useEffect(() => {
     hex.map(col => {
@@ -33,6 +32,7 @@ function Checkbox(props) {
     }
 
   };
+
 
   return (
     <div
