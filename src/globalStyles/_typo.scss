@@ -51,24 +51,24 @@ h5 {
 
 h6 {
   font-size: $token-font-size-medium;
-  font-weight: $token-font-weight-bold;
+  font-weight: $token-font-weight-semibold;
+  color: $token-color-font-secondary;
 }
 
 p {
   line-height: $token-font-line-height-medium;
+  font-weight: $token-font-weight-regular;
 }
 
 p.Bold {
   font-size: $token-font-size-medium;
-  font-weight: $token-font-weight-bold;
+  font-weight: $token-font-weight-semibold;
 }
 
 p.Small {
-  font-weight: $token-font-weight-regular;
   font-size: $token-font-size-small;
 }
 
 p.Xsmall {
-  font-weight: $token-font-weight-regular;
   font-size: $token-font-size-2x-small;
 }

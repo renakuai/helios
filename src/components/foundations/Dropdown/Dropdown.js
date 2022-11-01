@@ -1,10 +1,12 @@
 import './_dropdown.scss';
-import { useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import uuid from 'react-uuid';
+
 
 
 function Dropdown(props) {
 
-  const [open, setOpen] = useState(false);
+  const ref = useRef(null)
 
   const {
     options,
@@ -12,11 +14,12 @@ function Dropdown(props) {
     disabledMsg,
     state,
     setState,
-    helper
+    helper,
+    open,
+    setOpen
   } = props
 
   function handleChange(e) {
-
     if (options.length > 0) {
       setOpen(!open);
     }
@@ -28,7 +31,7 @@ function Dropdown(props) {
 
 
   return (
-    <div className="Dropdown">
+    <div className="Dropdown" ref={ref}>
       <p className="Label">{label}</p>
       <p className="Xsmall">{helper}</p>
       <button
@@ -38,19 +41,19 @@ function Dropdown(props) {
       >
         <div className="Options"
         >
-          {options.length > 0 ? state : disabledMsg}
-          <img src="/icons/arrow-drop-down.svg" />
+          {options.length > 0 ? (typeof (state) === 'number' ? state : (state[0].toUpperCase() + state.substring(1))) : disabledMsg}
+          <img className="Options" src="/icons/arrow-drop-down.svg" />
         </div>
       </button>
 
       {open && <ul className="List" onClick={handleChange} >
         {options.map((item) => (
           <li
-            key={'list-' + item}
+            key={uuid()}
             id={item}
             onClick={(e) => handleSelect(e)}
-            className={item === state && 'Bold'}
-          >{item}</li>))}
+            className={item === state ? 'Bold' : null}
+          >{typeof (item) === 'number' ? item : item[0].toUpperCase() + item.substring(1)}</li>))}
       </ul>}
     </div>
   );

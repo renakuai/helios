@@ -1,4 +1,4 @@
-import './_button.scss';
+import { Btn } from './_button.styled';
 import { useState } from 'react';
 
 
@@ -9,18 +9,22 @@ function Button(props) {
     iconRight,
     iconLeft,
     children,
-    onClick
+    onClick,
+    semanticColorTokens,
+    radius
   } = props;
 
   return (
-    <button
+    <Btn
       type={type}
       iconright={iconRight}
       iconleft={iconLeft}
       onClick={onClick}
+      radius={radius}
+      semanticColorTokens={semanticColorTokens}
     >
       {children}
-    </button>
+    </Btn>
   );
 }
 

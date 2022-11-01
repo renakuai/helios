@@ -2,29 +2,28 @@ import { useState } from 'react';
 import Dropdown from './foundations/Dropdown/Dropdown.js'
 
 
-function Stops(props) {
+function Radius(props) {
 
-  const { stops, setStops, open, setOpen } = props;
+  const { radius, setRadius, open, setOpen } = props;
 
-  const options = [3, 4, 5, 6, 7, 8, 9]
+  const options = ['small', 'medium', 'large']
 
   return (
     <article className="Color__primary">
       <div>
         <Dropdown
-          label="Lightness Stops:"
-          name="primaryColor"
+          label="Border Radius:"
           disabledMsg="No colors selected"
           options={options}
-          state={stops}
-          setState={setStops}
+          state={radius}
+          setState={setRadius}
           open={open}
           setOpen={setOpen}
-          helper="Defines the number of tints / shades for each selected color."
+          helper="Defines the rounding intensity of your main elements."
         />
       </div>
     </article >
   );
 }
 
-export default Stops;
+export default Radius;

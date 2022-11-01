@@ -5,13 +5,17 @@ import { useEffect, useState } from 'react';
 function ColorPill(props) {
   const {
     hsl,
-    color
+    color,
+    size,
+    color2
   } = props;
 
+
   return (
-    <div className="Pill">
-      <div className="Box" aria-label="color" style={{ backgroundColor: hsl }} />
-      <p className="Small">{color[0].toUpperCase() + color.substring(1)}</p>
+    <div className={size === "long" ? "Pill Long" : "Pill"}>
+      <div className={color === '$token-color-white' || color2 === '$token-color-white' ? "Box Outline" : "Box"} aria-label="color" style={{ backgroundColor: hsl }} />
+      <p className="Small">{color}</p>
+      <p className="Small">{color2}</p>
     </div>
   );
 }

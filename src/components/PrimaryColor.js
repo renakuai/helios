@@ -4,7 +4,7 @@ import Dropdown from './foundations/Dropdown/Dropdown.js'
 
 function PrimaryColor(props) {
 
-  const { pickedColors, setPrimary, primary } = props;
+  const { pickedColors, setPrimary, primary, open, setOpen } = props;
 
   return (
     <article className="Color__primary">
@@ -16,6 +16,8 @@ function PrimaryColor(props) {
           options={pickedColors}
           setState={setPrimary}
           state={primary}
+          open={open}
+          setOpen={setOpen}
           helper="This is the defining color across your design system based on the color palette you've selected above."
         />
       </div>

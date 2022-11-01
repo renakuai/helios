@@ -1,0 +1,46 @@
+@import '/build/scss/_global.scss';
+
+nav.Top {
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-bottom: 1px solid $token-color-border-secondary;
+
+    li {
+      list-style-type: none;
+      margin: 0;
+      padding-top: 0;
+      margin-right: 0.5rem;
+      padding-bottom: 0.75rem;
+
+
+      a:active,
+      a {
+        color: $token-color-font-secondary;
+        font-weight: $token-font-weight-regular;
+        text-decoration: none;
+        font-size: $token-font-size-large;
+
+        &:hover {
+          color: $token-color-font-primary;
+        }
+      }
+    }
+
+    li.Active {
+      border-bottom: 4px solid $token-color-border-tertiary;
+
+      a:active,
+      a {
+        font-weight: $token-font-weight-bold;
+        color: $token-color-font-primary;
+      }
+
+    }
+  }
+}

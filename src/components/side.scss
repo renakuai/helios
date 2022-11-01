@@ -6,3 +6,14 @@
   grid-column: 1 / 2;
   min-height: 100%;
 }
+
+.Palette {
+  display: flex;
+  flex-direction: column;
+}
+
+section.Options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

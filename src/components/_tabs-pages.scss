@@ -1,0 +1,36 @@
+@import '/build/scss/_global.scss';
+
+.Page {
+  margin-top: 2rem;
+
+  .Row-horizontal {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 2rem;
+
+    p {
+      color: $token-color-font-secondary
+    }
+  }
+
+  .Row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+
+    h6 {
+      padding-bottom: 0.25rem;
+    }
+
+    .Details {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+  }
+}

@@ -1,11 +1,29 @@
+@import '/build/scss/_global.scss';
+
 .Pill {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 170px;
+  width: 180px;
+
+  p {
+    line-height: 120%;
+    color: $token-color-font-secondary
+  }
+}
+
+.Long {
+  width: fit-content;
 }
 
 .Box {
   height: 64px;
   width: 64px;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+.Outline {
+  box-sizing: border-box;
+  border: 1px solid $token-color-border-secondary
 }
