@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Dropdown from './foundations/Dropdown/Dropdown.js'
+import Dropdown from '../foundations/Dropdown/Dropdown.js'
 
 
 function PrimaryColor(props) {

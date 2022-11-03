@@ -3,9 +3,9 @@ import { render } from 'react-dom'
 import ReactDOM from 'react-dom/client';
 import './globalStyles/index.scss';
 import App from './components/App';
-import GlobalTokens from './components/GlobalTokens.js';
-import Buttons from './components/Buttons.js';
-import SemanticTokens from './components/SemanticTokens.js'
+import GlobalTokens from './components/TabsPages/GlobalTokens.js';
+import Buttons from './components/TabsPages/Buttons.js';
+import SemanticTokens from './components/TabsPages/SemanticTokens.js'
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 

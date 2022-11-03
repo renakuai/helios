@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './_tabs-pages.scss';
 import uuid from 'react-uuid';
 import { useOutletContext } from "react-router-dom";
-import Btn from './foundations/Button/Button'
+import Btn from '../foundations/Button/Button'
 
 
 function Buttons() {
@@ -14,7 +14,7 @@ function Buttons() {
 
   return (
     <div className="Page" >
-      <div className="Section">
+      <div className="Row">
         <h5>Button Types</h5>
 
         <div className="Row-horizontal">
@@ -33,6 +33,16 @@ function Buttons() {
 
             <Btn
               type="secondary"
+              semanticColorTokens={semanticColorTokens}
+              radius={radius}
+            >Button</Btn>
+          </div>
+
+          <div className="Item">
+            <h6>Tertiary</h6>
+
+            <Btn
+              type="tertiary"
               semanticColorTokens={semanticColorTokens}
               radius={radius}
             >Button</Btn>

@@ -1,8 +1,8 @@
 import './side.scss';
 import { useState, useRef } from 'react';
-import Menu from './foundations/Menu/Menu.js';
-import Checkbox from './foundations/Checkbox/Checkbox.js'
-import { colorOptions } from './ColorOptions.js'
+import Scroll from '../foundations/Scroll/Scroll.js';
+import Checkbox from '../foundations/Checkbox/Checkbox.js'
+import { colorOptions } from '../utils/Objects.js'
 import PrimaryColor from './PrimaryColor.js';
 import Stops from './Stops.js'
 import Radius from './Radius.js'
@@ -13,12 +13,13 @@ function Palette(props) {
   const [openPrimary, setOpenPrimary] = useState(false);
   const [openLightness, setOpenLightness] = useState(false);
   const [openRadius, setOpenRadius] = useState(false);
+  //import hex codes for color pills
+  const [hex, setHex] = useState(colorOptions);
 
 
   const {
     pickedColors,
     setPickedColors,
-    hex,
     primary,
     setPrimary,
     stops,
@@ -47,7 +48,7 @@ function Palette(props) {
         <div className="Palette" onClick={(e) => handleClick(e)}>
           <header><h5>Options</h5></header>
           <p>Color Palette:</p>
-          <Menu>
+          <Scroll>
             {colorOptions.map((col, i) => (
               <Checkbox
                 key={i + col}
@@ -56,7 +57,7 @@ function Palette(props) {
                 setPickedColors={setPickedColors}
               >{col.name}</Checkbox>
             ))}
-          </Menu>
+          </Scroll>
         </div>
 
         <div className="Primary" onClick={(e) => handleClick(e)}>

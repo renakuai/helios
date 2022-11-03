@@ -25,12 +25,18 @@
       padding-bottom: 0.25rem;
     }
 
-    .Details {
-      display: flex;
-      flex-direction: row;
-      gap: 1rem;
-      flex-wrap: wrap;
+    .Details-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       margin-bottom: 2rem;
+      gap: 1rem;
+    }
+
+    .Details-grid__large {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      margin-bottom: 2rem;
+      gap: 1rem;
     }
   }
 }

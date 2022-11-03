@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 180px;
 
   p {
     line-height: 120%;
@@ -12,9 +11,6 @@
   }
 }
 
-.Long {
-  width: fit-content;
-}
 
 .Box {
   height: 64px;

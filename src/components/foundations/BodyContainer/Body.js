@@ -1,6 +1,6 @@
 import './_body.scss';
-import GlobalTokens from './GlobalTokens.js';
-import SemanticTokens from './SemanticTokens.js';
+import GlobalTokens from '../../TabsPages/GlobalTokens.js';
+import SemanticTokens from '../../TabsPages/SemanticTokens.js';
 import { useState } from 'react'
 import { Outlet } from "react-router-dom"
 
