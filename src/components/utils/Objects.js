@@ -12,10 +12,37 @@ export const colorOptions = [
   { name: "orange", color: "#FFAF1F" },
   { name: "brick", color: "#BA4E36" },
   { name: "rust", color: "#CA661E" },
-  { name: "red", color: "#B80D00" },
+  /*{ name: "red", color: "#B80D00" },*/
   { name: "magenta", color: "#D233EC" },
   { name: "pink", color: "#F91A9F" },
 ]
+
+export const tintsObj = {
+  "white": "hsl(0,0%,100%)",
+  "black": "hsl(0,0%,0%)",
+  "grey": {
+    "$token-color-grey-10": "hsl(0,0%,96%)",
+    "$token-color-grey-20": "hsl(0,0%,85%)",
+    "$token-color-grey-30": "hsl(0,0%,74%)",
+    "$token-color-grey-40": "hsl(0,0%,63%)",
+    "$token-color-grey-50": "hsl(0,0%,52%)",
+    "$token-color-grey-60": "hsl(0,0%,41%)",
+    "$token-color-grey-70": "hsl(0,0%,30%)",
+    "$token-color-grey-80": "hsl(0,0%,19%)",
+    "$token-color-grey-90": "hsl(0,0%,8%)"
+  },
+  "red": {
+    "$token-color-red-10": "hsl(4,100%,96%)",
+    "$token-color-red-20": "hsl(4,100%,86%)",
+    /*"$token-color-red-30": "hsl(4,100%,76%)",*/
+    /*"$token-color-red-40": "hsl(4,100%,66%)",*/
+    /*"$token-color-red-50": "hsl(4,100%,56%)",*/
+    "$token-color-red-60": "hsl(4,100%,46%)",
+    "$token-color-red-70": "hsl(4,100%,36%)",
+    "$token-color-red-80": "hsl(4,100%,26%)",
+    "$token-color-red-90": "hsl(4,100%,16%)"
+  }
+}
 
 export const globalColor = {
   "white": "hsl(0,0%,100%)",
@@ -73,9 +100,9 @@ export const globalColor = {
   "red": {
     "$token-color-red-10": "hsl(4,100%,96%)",
     "$token-color-red-20": "hsl(4,100%,86%)",
-    "$token-color-red-30": "hsl(4,100%,76%)",
-    "$token-color-red-40": "hsl(4,100%,66%)",
-    "$token-color-red-50": "hsl(4,100%,56%)",
+    /*"$token-color-red-30": "hsl(4,100%,76%)",*/
+    /*"$token-color-red-40": "hsl(4,100%,66%)",*/
+    /*"$token-color-red-50": "hsl(4,100%,56%)",*/
     "$token-color-red-60": "hsl(4,100%,46%)",
     "$token-color-red-70": "hsl(4,100%,36%)",
     "$token-color-red-80": "hsl(4,100%,26%)",

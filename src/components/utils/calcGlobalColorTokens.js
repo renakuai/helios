@@ -1,5 +1,5 @@
 
-export function calcAllTints(color, stops, setTints) {
+export function calcGlobalColorTokens(color, stops, setGlobalColorTokens) {
 
   const baseColors = {
     'grey': 'hsl(0,0%,',
@@ -30,8 +30,8 @@ export function calcAllTints(color, stops, setTints) {
   lightness.forEach(val => {
     colorVal += 10;
     copy[color] = { ...copy[color] };
-    copy[color][colorVal] = HSL + val;
-    setTints(prevState => ({
+    copy[color]['$token-color-' + color + '-' + colorVal] = HSL + val;
+    setGlobalColorTokens(prevState => ({
       ...prevState,
       [color]: copy[color]
     }))

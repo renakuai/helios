@@ -14,9 +14,9 @@ function Buttons() {
 
   return (
     <div className="Page" >
+
       <div className="Row">
         <h5>Button Types</h5>
-
         <div className="Row-horizontal">
           <div className="Item">
             <h6>Primary</h6>
@@ -48,8 +48,35 @@ function Buttons() {
             >Button</Btn>
           </div>
         </div>
-
       </div>
+
+      <div className="Row">
+        <h5>Button Sizes</h5>
+        <div className="Row-horizontal">
+          <div className="Item">
+            <h6>Large</h6>
+
+            <Btn
+              size="large"
+              type="primary"
+              semanticColorTokens={semanticColorTokens}
+              radius={radius}
+            >Button</Btn>
+          </div>
+
+          <div className="Item">
+            <h6>Small</h6>
+
+            <Btn
+              type="secondary"
+              semanticColorTokens={semanticColorTokens}
+              radius={radius}
+            >Button</Btn>
+          </div>
+
+        </div>
+      </div>
+
     </div >
   );
 }

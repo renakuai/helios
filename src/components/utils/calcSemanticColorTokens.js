@@ -1,6 +1,9 @@
 export function calcSemanticColorTokens(name, stops, setSemanticColorTokens, hues, main) {
   let option = '';
   let count = '';
+  if (main === 'grey' || main === 'red') {
+    stops = 9
+  }
   if (name === '$token-color-background-action-primary-default') {
     if (stops <= 4) {
       count = (stops) * 10

@@ -1,8 +1,8 @@
-import './_menu.scss';
+import './_scroll.scss';
 import { useState } from 'react';
 
 
-function Menu(props) {
+function Scroll(props) {
 
   const {
     children
@@ -17,4 +17,4 @@ function Menu(props) {
   );
 }
 
-export default Menu;
+export default Scroll;

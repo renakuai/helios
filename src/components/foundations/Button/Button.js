@@ -10,7 +10,8 @@ function Button(props) {
     iconLeft,
     children,
     semanticColorTokens,
-    radius
+    radius,
+    size
   } = props;
 
   return (
@@ -19,9 +20,12 @@ function Button(props) {
       iconright={iconRight}
       iconleft={iconLeft}
       radius={radius}
+      size={size}
       semanticColorTokens={semanticColorTokens}
     >
+      {iconRight}
       {children}
+      {iconLeft}
     </Btn>
   );
 }

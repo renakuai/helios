@@ -44,8 +44,15 @@ export const Btn = styled.button`
         break;
     }
   }};
-  font-weight: 600;
+${props => props.size === 'large' && `
+  padding: 0.65rem 1.15rem;
+`
+  }};
+${props => props.size === 'small' && `
   padding: 0.5rem 1rem;
+`
+  }};
+  font-weight: 600;
   &:hover {
     cursor: pointer
   }

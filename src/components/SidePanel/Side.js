@@ -48,6 +48,7 @@ function Palette(props) {
         <div className="Palette" onClick={(e) => handleClick(e)}>
           <header><h5>Options</h5></header>
           <p>Color Palette:</p>
+          <p className="Xsmall">White, black, grey, and red are not customizable due those colors always being needed.</p>
           <Scroll>
             {colorOptions.map((col, i) => (
               <Checkbox

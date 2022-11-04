@@ -1,12 +1,12 @@
 import './app.scss';
 import Side from './SidePanel/Side.js';
 import { useState, useMemo, useEffect } from 'react';
-import { colorOptions, globalColor, semanticColor } from './utils/Objects.js';
+import { colorOptions, globalColor, semanticColor, tintsObj } from './utils/Objects.js';
 import Body from './foundations/BodyContainer/Body.js';
 import { Outlet } from "react-router-dom";
 import TopNav from './foundations/Nav/TopNav';
-import { calcAllTints } from './utils/calcAllTints'
-import { calcSemanticColorTokens } from './utils/calcColorTokens'
+import { calcGlobalColorTokens } from './utils/calcGlobalColorTokens'
+import { calcSemanticColorTokens } from './utils/calcSemanticColorTokens'
 
 
 function App() {
@@ -21,65 +21,38 @@ function App() {
   const [radius, setRadius] = useState('medium');
 
   //user input: colors selected
-  const [pickedColors, setPickedColors] = useState(['purple', 'plum', 'blue', 'cobalt', 'turquoise', 'teal', 'green', 'fern', 'yellow', 'corn', 'orange', 'brick', 'rust', 'magenta', 'pink']);
+  const [pickedColors, setPickedColors] = useState(['grey', 'red', 'purple', 'plum', 'blue', 'cobalt', 'turquoise', 'teal', 'green', 'fern', 'yellow', 'corn', 'orange', 'brick', 'rust', 'magenta', 'pink']);
 
   //user input: primary color
   const [primary, setPrimary] = useState('blue');
 
   //list of hues
-  const [tints, setTints] = useState();
+  const [tints, setTints] = useState(tintsObj);
 
   //generated: globalColorTokens
   const [globalColorTokens, setGlobalColorTokens] = useState(
     globalColor);
 
-
-  //generated semantic color tokens
+  //generated: semantic color tokens
   const [semanticColorTokens, setSemanticColorTokens] = useState(semanticColor);
 
-
-  //useEffect that triggers calculation of all tints
+  //update globalColorTokens
   useEffect(() => {
-    setTints({
-      'white': globalColor.white,
-      'black': globalColor.black,
-      "grey": globalColor.grey,
-      "red": globalColor.red
-    });
-    pickedColors.map((color) => (
-      calcAllTints(color[0].toLowerCase() + color.substring(1), stops, setTints)
-    ));
+    setGlobalColorTokens({});
 
-  }, [pickedColors, setPickedColors, stops, setStops, primary])
+    pickedColors.map((color) => {
+      (color === 'white' || color === 'black' || color === 'red' || color === 'grey') ? setGlobalColorTokens({
+        "white": tintsObj.white,
+        "black": tintsObj.black,
+        "red": tintsObj.red,
+        "grey": tintsObj.grey
+      }) : calcGlobalColorTokens(color[0].toLowerCase() + color.substring(1), stops, setGlobalColorTokens)
+    })
 
-  console.log(globalColor.red)
+  }, [stops, pickedColors, setPickedColors, primary])
 
 
-  //updating globalColorTokens
-  useEffect(() => {
-    if (tints) {
-      setGlobalColorTokens({});
-      Object.keys(tints).map(key => (
-        (key === 'white' || key === 'black' || key === 'grey' || key === 'red' ? setGlobalColorTokens({
-          "white": tints.white,
-          "black": tints.black,
-          "grey": tints.grey,
-          "red": tints.red,
-        }) : Object.keys(tints[key]).map(hue => (
-          setGlobalColorTokens(prevState => ({
-            ...prevState,
-            [key]: {
-              ...prevState[key],
-              ['$token-color-' + key + '-' + hue]: tints[key][hue]
-            }
-          })
-          ))
-        ))
-      ))
-    }
-  }, [tints])
-
-  //updating semanticColorTokens
+  //update semanticColorTokens
   useEffect(() => {
     const names = Object.keys(semanticColor).map(key => (
       key
