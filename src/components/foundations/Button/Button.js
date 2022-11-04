@@ -1,4 +1,4 @@
-import { Btn } from './_button.styled';
+import { Btn, path } from './_button.styled';
 import { useState } from 'react';
 
 
@@ -14,6 +14,8 @@ function Button(props) {
     size
   } = props;
 
+  const setIconColor = `${type === "primary" ? "#FFF" : props.semanticColorTokens['$token-color-background-action-primary-default'].hsl}`
+
   return (
     <Btn
       type={type}
@@ -23,9 +25,9 @@ function Button(props) {
       size={size}
       semanticColorTokens={semanticColorTokens}
     >
-      {iconRight}
+      {iconLeft && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d={iconLeft} fill={setIconColor} /></svg>}
       {children}
-      {iconLeft}
+      {iconRight && <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d={iconRight} fill={setIconColor} /></svg>}
     </Btn>
   );
 }

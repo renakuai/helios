@@ -141,6 +141,10 @@ export const semanticColor = {
     token: '$token-color-blue-10',
     hsl: 'hsl(212, 77%, 96%)'
   },
+  '$token-color-background-action-disabled': {
+    token: '$token-color-grey-20',
+    hsl: 'hsl(0,0%, 86%)'
+  },
   '$token-color-background-action-danger-default': {
     token: '$token-color-red-70',
     hsl: "hsl(4,100%,36%)"
