@@ -54,11 +54,34 @@ function App() {
 
   //update semanticColorTokens
   useEffect(() => {
+
+    //update HSL vals in semanticColor obj
+    Object.keys(semanticColor).map(key => (
+      (Object.keys(globalColorTokens).map(item => {
+        if (semanticColor[key]["token"] === "$token-color-white") {
+          semanticColor[key]["hsl"] = globalColorTokens["white"]
+        }
+        else if (semanticColor[key]["token"] === "$token-color-black") {
+          semanticColor[key]["hsl"] = globalColorTokens["black"]
+        }
+        else {
+          Object.keys(globalColorTokens[item]).map(val => {
+
+            if (val === semanticColor[key]["token"]) {
+              semanticColor[key]["hsl"] = globalColorTokens[item][val]
+            }
+          })
+        }
+      }))
+    ))
+
     const names = Object.keys(semanticColor).map(key => (
       key
     ))
 
     let main = ''
+
+
 
     if (globalColorTokens[primary] !== undefined) {
       let hues = globalColorTokens[primary];

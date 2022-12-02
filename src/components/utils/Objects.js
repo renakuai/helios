@@ -118,84 +118,103 @@ export const globalColor = {
 
 export const semanticColor = {
   '$token-color-background-primary': {
-    token: '$token-color-white',
-    hsl: "hsl(0,0%,100%)"
+    token: '$token-color-white'
   },
   '$token-color-background-secondary': {
-    token: '$token-color-grey-10',
-    hsl: 'hsl(0,0%, 96%)'
+    token: '$token-color-grey-10'
   },
-  '$token-color-background-action-primary-default': {
-    token: '$token-color-blue-70',
-    hsl: 'hsl(212, 77%, 36%)'
+  '$token-color-background-action-primary': {
+    token: '$token-color-blue-70'
   },
   '$token-color-background-action-primary-hover': {
-    token: '$token-color-blue-60',
-    hsl: 'hsl(212, 77%, 46%)'
+    token: '$token-color-blue-60'
   },
-  '$token-color-background-action-secondary-default': {
-    token: '$token-color-white',
-    hsl: 'hsl(0, 0%, 100%)'
+  '$token-color-background-action-secondary': {
+    token: '$token-color-white'
   },
   '$token-color-background-action-secondary-hover': {
-    token: '$token-color-blue-10',
-    hsl: 'hsl(212, 77%, 96%)'
+    token: '$token-color-blue-10'
+  },
+  '$token-color-background-action-tertiary': {
+    token: '$token-color-white'
+  },
+  '$token-color-background-action-tertiary-hover': {
+    token: '$token-color-blue-10'
   },
   '$token-color-background-action-disabled': {
-    token: '$token-color-grey-20',
-    hsl: 'hsl(0,0%, 86%)'
+    token: '$token-color-grey-20'
   },
-  '$token-color-background-action-danger-default': {
-    token: '$token-color-red-70',
-    hsl: "hsl(4,100%,36%)"
+  '$token-color-background-action-danger': {
+    token: '$token-color-red-70'
   },
   '$token-color-background-action-danger-hover': {
-    token: '$token-color-red-60',
-    hsl: "hsl(4,100%,46%)"
+    token: '$token-color-red-60'
   },
-  '$token-color-background-notif-danger': {
-    token: '$token-color-red-10',
-    hsl: "hsl(4,100%,96%)"
+  '$token-color-background-danger': {
+    token: '$token-color-red-10'
   },
-  '$token-color-background-notif-info': {
-    token: '$token-color-blue-10',
-    hsl: 'hsl(212, 77%, 96%)'
+  '$token-color-background-info': {
+    token: '$token-color-blue-10'
   },
   '$token-color-font-primary': {
-    token: '$token-color-grey-90',
-    hsl: 'hsl(0,0%,8%)'
+    token: '$token-color-grey-90'
   },
   '$token-color-font-secondary': {
-    token: '$token-color-grey-60',
-    hsl: 'hsl(0,0%,41%)'
+    token: '$token-color-grey-60'
   },
   '$token-color-font-tertiary': {
-    token: '$token-color-blue-80',
-    hsl: 'hsl(212, 77%, 26%)'
+    token: '$token-color-blue-80'
   },
   '$token-color-font-inverse': {
-    token: '$token-color-white',
-    hsl: 'hsl(0, 0%, 100%)'
+    token: '$token-color-white'
   },
   '$token-color-font-disabled': {
-    token: '$token-color-grey-60',
-    hsl: 'hsl(0,0%,41%)'
+    token: '$token-color-grey-60'
   },
-  '$token-color-font-link-default': {
-    token: '$token-color-blue-80',
-    hsl: 'hsl(212,77%,16%)'
+  '$token-color-font-link': {
+    token: '$token-color-blue-80'
   },
   '$token-color-font-link-hover': {
-    token: '$token-color-blue-70',
-    hsl: 'hsl(212,77%,26%)'
+    token: '$token-color-blue-70'
   },
-  '$token-color-font-notif-danger': {
-    token: '$token-color-red-70',
-    hsl: "hsl(4,100%,36%)"
+  '$token-color-font-danger': {
+    token: '$token-color-red-70'
   },
-  '$token-color-font-notif-info': {
-    token: '$token-color-blue-80',
-    hsl: 'hsl(212, 77%, 26%)'
+  '$token-color-font-info': {
+    token: '$token-color-blue-80'
+  },
+  '$token-color-border-primary': {
+    token: '$token-color-grey-10'
+  },
+  '$token-color-border-secondary': {
+    token: '$token-color-grey-20'
+  },
+  '$token-color-border-tertiary': {
+    token: '$token-color-blue-70'
+  },
+  '$token-color-border-selected': {
+    token: '$token-color-blue-50'
+  },
+  '$token-color-border-inverse': {
+    token: '$token-color-white'
+  },
+  '$token-color-border-action-primary': {
+    token: '$token-color-blue-70'
+  },
+  '$token-color-border-action-primary-hover': {
+    token: '$token-color-blue-60'
+  },
+  '$token-color-border-action-secondary': {
+    token: '$token-color-blue-70'
+  },
+  '$token-color-border-action-secondary-hover': {
+    token: '$token-color-blue-70'
+  },
+  '$token-color-border-action-tertiary': {
+    token: '$token-color-white'
+  },
+  '$token-color-border-action-tertiary-hover': {
+    token: '$token-color-blue-10'
   },
 }
 

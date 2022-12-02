@@ -5,12 +5,23 @@
   "platforms": {
     "scss": {
       "transformGroup": "scss",
-      "buildPath": "build/scss/",
+      "buildPath": "src/build/scss/",
       "prefix": "token",
       "files": [
         {
           "destination": "_global.scss",
           "format": "scss/variables"
+        }
+      ]
+    },
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "src/build/css/",
+      "prefix": "token",
+      "files": [
+        {
+          "destination": "_global.css",
+          "format": "css/variables"
         }
       ]
     }

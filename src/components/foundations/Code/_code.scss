@@ -1,13 +1,19 @@
 @import '../../../build/scss/_global.scss';
 
-.Color__selector {
+.Code {
   display: flex;
   flex-direction: column;
-  max-height: 220px;
+  max-height: 400px;
   gap: $token-spacing-small;
   overflow-y: scroll;
   padding: $token-spacing-base;
-  border: 2px solid $token-color-border-secondary;
+  border: none;
   border-radius: $token-border-radius-medium;
-  background-color: $token-color-white;
+  background-color: $token-color-grey-90;
+  color: $token-color-grey-20;
+
+  .Language {
+    color: $token-color-font-secondary;
+    font-size: $token-font-size-small;
+  }
 }

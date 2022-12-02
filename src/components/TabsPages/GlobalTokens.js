@@ -2,14 +2,18 @@ import { useEffect, useState } from 'react';
 import ColorPill from '../foundations/ColorPill/ColorPill.js';
 import './_tabs-pages.scss';
 import uuid from 'react-uuid';
-import CodeSnippet from '../foundations/CodeSnippet/CodeSnippet.js';
+import Code from '../foundations/Code/Code.js';
 import { useOutletContext } from "react-router-dom";
+import Button from '../foundations/Button/Button.js';
 
 
 function GlobalTokens() {
 
-  const { setActiveTab, globalColorTokens, globalSizeTokens
+  const { setActiveTab, globalColorTokens, globalSizeTokens, stops
   } = useOutletContext();
+
+  const [formatted, setFormatted] = useState({ color: {} })
+  const [code, setCode] = useState('Show code')
 
   const [globalSpacingTokens, setGlobalSpacingTokens] = useState({
     "$token-spacing-2x-small": "0.25rem",
@@ -44,13 +48,80 @@ function GlobalTokens() {
     setActiveTab('Global');
   })
 
+  useEffect(() => {
+
+    setFormatted({ color: {} })
+
+
+    Object.keys(globalColorTokens).map(key => {
+      if (key === 'white' || key === 'black') {
+        setFormatted(prevState => ({
+          ...prevState,
+          "color": {
+            ...prevState.color,
+            [key]: {
+              value: globalColorTokens[key]
+            }
+          }
+        }))
+      }
+      else {
+        Object.keys(globalColorTokens[key]).map(item => (
+          setFormatted(prevState => ({
+            ...prevState,
+            "color": {
+              ...prevState.color,
+              [key]: {
+                ...prevState.color[key],
+                [item.slice(-2)]: {
+                  value: globalColorTokens[key][item]
+                }
+              }
+            }
+          }))
+        ))
+      }
+    })
+
+  }, [globalColorTokens])
+
+  function handleClick() {
+    if (code === 'Show code') {
+      setCode('Hide code')
+    }
+    else {
+      setCode('Show code')
+    }
+  }
+
 
   return (
     <div className="Page">
+
+      <Button
+        type="primary"
+        onClick={handleClick}
+      >
+        {code}</Button>
+
+      <div
+        className="Row"
+        style={{ display: code === 'Show code' ? 'none' : 'block' }}
+      >
+        <div>
+          <Code language="JSON">
+            <pre>
+              {JSON.stringify(formatted, null, 4)}
+            </pre>
+          </Code>
+        </div>
+      </div>
+
       <div className="Row">
         <div className="Details-grid">
+
           <div>
-            <h5>Sizing</h5>
+            <h5>Spacing</h5>
             {Object.keys(globalSpacingTokens).map(key => (
               <p className="Small ">{key}: {globalSpacingTokens[key]}</p>
             ))}

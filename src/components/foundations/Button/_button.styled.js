@@ -7,41 +7,24 @@ export const Btn = styled.button`
   box-sizing: border-box;
   gap: 0.25rem;
   justify-content: center;
+  width: fit-content;
   ${props => props.type === 'primary' && `
-    background-color: ${props.semanticColorTokens['$token-color-background-action-primary-default'].hsl};
-    border: 2px solid ${props.semanticColorTokens['$token-color-background-action-primary-default'].hsl};
-    color: #fff;
+    background-color: var(--token-color-background-action-primary-default);
+    border: 2px solid var(--token-color-border-action-primary-default);
+    color:  var(--token-color-font-inverse);
     &:hover {
-      background-color: ${props.semanticColorTokens['$token-color-background-action-primary-hover'].hsl};
-      border: 2px solid ${props.semanticColorTokens['$token-color-background-action-primary-hover'].hsl};
-    }
-    `
-  }};
-  ${props => props.type === 'danger' && `
-    background-color: ${props.semanticColorTokens['$token-color-background-action-danger-default'].hsl};
-    border: 2px solid ${props.semanticColorTokens['$token-color-background-action-danger-default'].hsl};
-    color: #fff;
-    &:hover {
-      background-color: ${props.semanticColorTokens['$token-color-background-action-danger-hover'].hsl};
-      border: 2px solid ${props.semanticColorTokens['$token-color-background-action-danger-hover'].hsl};
-    }
-    `
-  }};
-  ${props => props.type === 'disabled' && `
-    background-color: ${props.semanticColorTokens['$token-color-background-action-disabled'].hsl};
-    border: 2px solid ${props.semanticColorTokens['$token-color-background-action-disabled'].hsl};
-    color: ${props.semanticColorTokens['$token-color-font-secondary'].hsl};
-    &:hover {
-      cursor: none
+      background-color: var(--token-color-background-action-primary-hover);
+      border: 2px solid var(--token-color-border-action-primary-hover);
     }
     `
   }};
   ${props => props.type === 'secondary' && `
-    background-color: ${props.semanticColorTokens['$token-color-background-action-secondary-default'].hsl};
-    border: 2px solid ${props.semanticColorTokens['$token-color-background-action-primary-default'].hsl};
-    color: ${props.semanticColorTokens['$token-color-background-action-primary-default'].hsl};
+    background-color: var(--token-color-background-action-secondary);
+    border: 2px solid var(--token-color-border-action-secondary);
+    color: var(--token-color-font-tertiary);
     &:hover {
-      background-color: ${props.semanticColorTokens['$token-color-background-action-secondary-hover'].hsl};
+      background-color: var(--token-color-background-action-secondary-hover);
+      border: 2px solid var(--token-color-border-action-secondary-hover);
     }
     `
   }};
@@ -49,42 +32,24 @@ export const Btn = styled.button`
     background-color: #FFF;
     border: none;
     border: 2px solid #FFF;
-    color: ${props.semanticColorTokens['$token-color-background-action-primary-default'].hsl};
+    color: ${props.semanticColorTokens['$token-color-font-tertiary'].hsl};
     &:hover {
-      background-color: ${props.semanticColorTokens['$token-color-background-action-secondary-hover'].hsl};
-      border: 2px solid ${props.semanticColorTokens['$token-color-background-action-secondary-hover'].hsl};
+      background-color: ${props.semanticColorTokens['$token-color-background-action-tertiary-hover'].hsl};
+      border: 2px solid ${props.semanticColorTokens['$token-color-border-action-tertiary-hover'].hsl};
     }
     `
-  }}
-  border-radius: ${props => {
-    switch (props.radius) {
-      case ('small'):
-        return '0.25rem';
-      case ('medium'):
-        return '0.5rem';
-      case ('large'):
-        return '5rem';
-      default:
-        break;
-    }
   }};
+  border-radius: 5rem;
   height: 36px;
-${props => props.size === 'large' && `
-  padding: 0.65rem 1.15rem;
-  height: 40px
-`
-  }};
-${props => props.size === 'small' || !props.size && `
-  padding: 0.5rem 1rem;
-  height: 36px
-`
-  }};
   font-weight: 600;
   &:hover {
     cursor: pointer
   }
 `
 
-const path = styled.path`
-  fill: #fff
+export const Path = styled.path`
+${props => props.type === 'primary' && `
+ fill: $token-color-icon-inverse;
+`
+  }
 `

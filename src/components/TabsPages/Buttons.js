@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './_tabs-pages.scss';
 import uuid from 'react-uuid';
 import { useOutletContext } from "react-router-dom";
-import Btn from '../foundations/Button/Button'
+import Btn from '../foundations/generated/Button/Button'
 
 
 function Buttons() {
