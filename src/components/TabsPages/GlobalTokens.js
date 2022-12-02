@@ -117,6 +117,29 @@ function GlobalTokens() {
         </div>
       </div>
 
+
+      <div className="Row">
+        <h5>Colors</h5>
+        {Object.keys(globalColorTokens).map(key => (
+          <div className="Row" key={uuid()} >
+            <h6 key={uuid()}>{key[0].toUpperCase() + key.substring(1)}</h6>
+            <div className="Details-grid" key={key + '_section'}>
+              {(key === 'white' || key === 'black') ? <ColorPill
+                color={`$token-color-${key}`}
+                hsl={globalColorTokens[key]}
+              /> : Object.keys(globalColorTokens[key]).map(hue => (
+                <div className="Hue" key={uuid()}>
+                  <ColorPill
+                    color={`${hue}`}
+                    hsl={globalColorTokens[key][hue]}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
       <div className="Row">
         <div className="Details-grid">
 
@@ -142,26 +165,6 @@ function GlobalTokens() {
           </div>
         </div>
       </div>
-
-      <h5>Colors</h5>
-      {Object.keys(globalColorTokens).map(key => (
-        <div className="Row" key={uuid()} >
-          <h6 key={uuid()}>{key[0].toUpperCase() + key.substring(1)}</h6>
-          <div className="Details-grid" key={key + '_section'}>
-            {(key === 'white' || key === 'black') ? <ColorPill
-              color={`$token-color-${key}`}
-              hsl={globalColorTokens[key]}
-            /> : Object.keys(globalColorTokens[key]).map(hue => (
-              <div className="Hue" key={uuid()}>
-                <ColorPill
-                  color={`${hue}`}
-                  hsl={globalColorTokens[key][hue]}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
     </div>
   );
 }
